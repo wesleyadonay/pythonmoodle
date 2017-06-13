@@ -108,13 +108,12 @@ def dista10(n):
 # apaga('kitten', 1) -> 'ktten'
 # apaga('kitten', 4) -> 'kittn'
 def apaga(s, n):
-  lista = []
-  lista.append(s)
-
-  return lista[n]
-    
-
-  return
+  palavra=""
+  for i in range(0,len(s)):
+    if i != n:
+      palavra += s[i]
+  
+  return palavra
 
 # I. troca
 # seja uma string s
@@ -124,7 +123,14 @@ def apaga(s, n):
 # troca('a') -> 'a'
 # troca('ab') -> 'ba'
 def troca(s):
-  return
+  if len(s) <= 1:
+    return s
+  else:
+    palavra = s[len(s)-1]
+    for i in range(1, len(s)-1):
+      palavra += s[i]
+    palavra += s[0]
+    return palavra
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
